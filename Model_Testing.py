@@ -6,8 +6,8 @@ from torchvision import transforms
 from torchvision.utils import draw_segmentation_masks
 from Images import Images
 
-imagepath = "/Users/nivaankaushal/Downloads/TrashApp/TrashAppV2 (2024)/Bottles"
-maskpath = "/Users/nivaankaushal/Downloads/TrashApp/TrashAppV2 (2024)/SegmentationObject"
+imagepath = ""
+maskpath = ""
 model = UNET(in_channels=3, out_channels=1)
 model.load_state_dict(torch.load("UNET_Testing/model.pt"))
 images = Images(x_directory=imagepath, y_directory=maskpath)
