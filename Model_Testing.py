@@ -12,10 +12,6 @@ model = UNET(in_channels=3, out_channels=1)
 model.load_state_dict(torch.load("UNET_Testing/model.pt"))
 images = Images(x_directory=imagepath, y_directory=maskpath)
 
-
-
-model.eval()
-
 model.eval()
 with torch.inference_mode():
     for x, y in images: 
