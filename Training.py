@@ -11,12 +11,9 @@ if __name__ == '__main__':
     from torch.optim.lr_scheduler import StepLR
 
     model = UNET(in_channels=3, out_channels=1)
-    imagepath = "/Users/nivaankaushal/Downloads/TrashApp/TrashAppV2 (2024)/Bottles"
-    maskpath = "/Users/nivaankaushal/Downloads/TrashApp/TrashAppV2 (2024)/SegmentationObject"
+    imagepath = ""
+    maskpath = ""
     images = Images(x_directory=imagepath, y_directory=maskpath)
-    batches = []
-    for x in range(15):
-        batches.append("batch_"+str(x+1))
 
     epochs = 10
 
